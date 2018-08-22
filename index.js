@@ -13,3 +13,12 @@ const personalGreeting = document.querySelector('.personal-greeting');
 form.addEventListener('submit', function(e) {
     e.preventDefault();
 });
+
+// run function when the 'Say hello' button is clicked
+submitBtn.addEventListener('click', function() {
+    // store the entered name in web storage
+    localStorage.setItem('name', nameInput.value);
+    // run nameDisplayCheck() to sort out displaying the
+    // personalized greetings and updated form display
+    nameDisplayCheck();
+});
